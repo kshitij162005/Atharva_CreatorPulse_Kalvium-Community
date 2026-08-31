@@ -1,7 +1,7 @@
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
   import.meta.env.VITE_API_URL ||
-  ""; // Use relative paths for production
+  "http://localhost:8000"; // Default to localhost for development
 
 async function apiFetch(path, options = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
